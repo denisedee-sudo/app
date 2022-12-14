@@ -80,7 +80,7 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV['postgres://denise:01sj1xOnkKDTUsjJv3gllmD3J6IpfrrV@dpg-ce91h6sgqg418pafmn2g-a/toy'] %>
+  # url: <%= ENV['postgres://denise:01sj1xOnkKDTUsjJv3gllmD3J6IpfrrV@dpg-ce91h6sgqg418pafmn2g-a/toy'] %>
   database: toy
   username: denise
   password: <%= ENV['01sj1xOnkKDTUsjJv3gllmD3J6IpfrrV'] %>
