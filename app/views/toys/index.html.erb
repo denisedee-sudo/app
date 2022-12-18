@@ -16,6 +16,7 @@
       <tr>
         <td><%= toy.name %></td>
         <td><%= toy.description %></td>
+        <td><%= link_to 'Show', toy, method: :get %></td>
         <td><%= link_to 'Edit', edit_toy_path(toy) %></td>
         <td><%= link_to 'Destroy', toy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
