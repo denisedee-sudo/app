@@ -3,7 +3,7 @@ class CreateToys < ActiveRecord::Migration[6.0]
     create_table :toys do |t|
       t.string :name
       t.text :description
-
+      t.references :user
       t.timestamps
     end
   end

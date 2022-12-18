@@ -4,6 +4,12 @@
       <%= @user.first_name %> <br/>
       <%= @user.last_name %> <br/>
       <%= @user.email %> <br/>
-      <%= @user.phone %> <br/>
-
+      <%= @user.phone %> <br/> <br/>
+      <h2>Your Toys</h2>
+      <% @toys.each do |toy| %> 
+            <%= toy.name %> <br/> <br/>
+            <%= toy.description %> <br/> <br/>
+      <% end %>
+      <h2><%= link_to 'Add more toys!', new_toy_path %></h2>
+      
 <%= link_to 'Back', users_path %>
