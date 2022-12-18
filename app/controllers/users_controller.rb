@@ -38,8 +38,10 @@ class UsersController < ApplicationController
     @user.destroy
     flash[:success] = "This user was successfully removed."
   end
+  
   private
   def user_params
     params.require(:user).permit(:name, :password, :first_name, :last_name, :email, :phone)
   end
+
 end

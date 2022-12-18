@@ -1,5 +1,4 @@
 class ToysController < ApplicationController
-    class ToysController < ApplicationController
         def index
           @toys = Toy.all
         end
@@ -45,6 +44,4 @@ class ToysController < ApplicationController
         def toy_params
           params.require(:toy).permit(:name, :description)
         end
-      end
-      
 end

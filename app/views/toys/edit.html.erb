@@ -2,9 +2,11 @@
 <p>Find me in app/views/toys/edit.html.erb</p>
     <%= form_for(@toy) do |toy| %>
       <tr>
-        <td><%= toy.text_field :name %></td>
-        <td><%= toy.text_field :description %></td>
-        <td><%= toy.submit %>
+      <%= toy.label :name %> <br/>
+      <%= toy.text_field :name %> <br/> <br/>
+      <%= toy.label :description %> <br/> 
+      <%= toy.text_field :description %> <br/> <br/>
+      <%= toy.submit "Submit" %> <br/> 
       </tr>
     <% end %>
 
