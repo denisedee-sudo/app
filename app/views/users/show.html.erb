@@ -7,7 +7,7 @@
       <%= @user.phone %> <br/> <br/>
       <h2>Your Toys</h2>
       <% @toys.each do |toy| %> 
-            <%= toy.name %> <br/> <br/>
+            <h3><%= toy.name %> </h3> <br/> <br/>
             <%= toy.description %> <br/> <br/>
       <% end %>
       <h2><%= link_to 'Add more toys!', new_toy_path %></h2>
