@@ -19,12 +19,18 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = User.find(params[:id])
   end
 
   def update
     @user = User.find(params[:id])
     @user.update(user_params)
-    flash[:success] = "This user was successfully removed."
+    if @user.save
+      flash[:success] = "This user was successfully updated."
+      redirect_to "/users"
+    else
+      render "new"
+    end
   end
 
   def destroy
@@ -34,6 +40,6 @@ class UsersController < ApplicationController
   end
   private
   def user_params
-    params.require(:user).permit(:name, :email)
+    params.require(:user).permit(:username, :password, :first_name, :last_name, :email, :phone)
   end
 end
