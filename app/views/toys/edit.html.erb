@@ -1,0 +1,12 @@
+<h1>toys#edit</h1>
+<p>Find me in app/views/toys/edit.html.erb</p>
+    <%= form_for(@toy) do |toy| %>
+      <tr>
+        <td><%= toy.text_field :name %></td>
+        <td><%= toy.text_field :description %></td>
+        <td><%= toy.submit %>
+      </tr>
+    <% end %>
+
+<%= link_to 'Show', @toy %> |
+<%= link_to 'Back', toys_path %>
