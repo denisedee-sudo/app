@@ -91,6 +91,6 @@ test:
 production:
   <<: *default
   # url: <%= ENV['postgres://denise:01sj1xOnkKDTUsjJv3gllmD3J6IpfrrV@dpg-ce91h6sgqg418pafmn2g-a/toy'] %>
-  database: toy_6xn4
+  database: toy_rmob
   username: denise
-  password: <%= ENV['1XVfIcqwcGEjdpLPe6JQ3GD7G0m9WaYO'] %>
+  password: <%= ENV['hira9mM1GQYzLCbdx9jR2JZiIcu49YLh'] %>
