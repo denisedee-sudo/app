@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   def index
   end
 
-  def login
+  def new
   end
 
   def about

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/login' => "pages#login"
+  get '/login' => "pages#new"
   get '/about' => "pages#about"
   resources :toys
   resources :users
