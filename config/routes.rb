@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   get '/login' => "pages#new"
+  post '/login' => "pages#create"
+  delete '/logout' => 'pages#destroy' 
   get '/about' => "pages#about"
   resources :toys
   resources :users

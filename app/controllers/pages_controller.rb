@@ -5,6 +5,12 @@ class PagesController < ApplicationController
   def new
   end
 
+  def create
+  end
+
+  def destroy
+  end
+
   def about
   end
 end
