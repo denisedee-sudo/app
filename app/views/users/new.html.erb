@@ -1,20 +1,17 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
-
-    <%= form_for(@user) do |form| %>
-      <%= form.label :username %> <br/> 
-      <%= form.text_field :name %> <br/> 
-      <%= form.label :first_name %> <br/> 
-      <%= form.text_field :first_name %> <br/> 
-      <%= form.label :last_name %> <br/> 
-      <%= form.text_field :last_name %> <br/> 
-      <%= form.label :email %> <br/> 
-      <%= form.email_field :email %> <br/> 
-      <%= form.label :phone %> <br/> 
-      <%= form.telephone_field :phone %> <br/> 
-      <%= form.label :password %> <br/> 
-      <%= form.password_field :password %> <br/> <br/> 
-      <%= form.submit "Submit", class: "btn btn-jindigo" %><br/> <br/> 
-    <% end %>
-
+<h1 class="text-center me-4">SIGNUP</h1>
+<div class="container p-5 text-center" >
+  <div class="form-group px-5">
+      <%= form_for(@user) do |form| %>
+        <%= form.text_field :name, class: "form-control", :placeholder => "Username" %> <br/> 
+        <%= form.text_field :first_name, class: "form-control", :placeholder => "First name" %> <br/> 
+        <%= form.text_field :last_name, class: "form-control", :placeholder => "Last name" %> <br/> 
+        <%= form.email_field :email, class: "form-control", :placeholder => "Email" %> <br/> 
+        <%= form.telephone_field :phone, class: "form-control", :placeholder => "Phone number" %> <br/> 
+        <%= form.password_field :password, class: "form-control", :placeholder => "Password" %> <br/>
+        <div class="d-grid">
+        <%= form.submit "Signup", class: "btn btn-jindigo" %><br/> <br/> 
+        </div>
+      <% end %>
+  </div>
+</div>
 <%= link_to 'Back', users_path,  class: "btn btn-jindigo" %>
