@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  get 'pages/index'
-  get 'pages/signup'
-  get 'pages/about'
+  get '/login' => "pages#login"
+  get '/about' => "pages#about"
   resources :toys
   resources :users
   get "/signup" => "users#new"
