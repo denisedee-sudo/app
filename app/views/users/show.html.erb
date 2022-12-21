@@ -6,10 +6,23 @@
       <%= @user.email %> <br/>
       <%= @user.phone %> <br/> <br/>
       <h2>Your Toys</h2>
+
       <% @toys.each do |toy| %> 
-            <h3><%= toy.name %> </h3> <br/> <br/>
-            <%= toy.description %> <br/> <br/>
+            <div class="row">
+                  <div class="col-4">
+                        <div class="card bg-dark mb-2">
+                              <div class="card-header">
+                              <%= toy.name%>
+                              </div>
+                              <div class="card-body">
+                              <p class="card-text">
+                              <%= toy.description%>
+                              </p>
+                              </div>
+                        </div>
+                  </div>
+            </div>
       <% end %>
-      <h2><%= link_to 'Add more toys!', new_toy_path %></h2>
-      
-<%= link_to 'Back', users_path %>
+      <%= link_to 'Add more toys!', new_toy_path, class: "btn btn-jindigo" %>
+      <br/> <br/>
+<%= link_to 'Back', users_path, class: "btn btn-jindigo" %>

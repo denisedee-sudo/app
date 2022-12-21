@@ -5,6 +5,7 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 /sass
+/css
 # Ignore bundler config.
 /.bundle
 
