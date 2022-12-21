@@ -1,17 +1,23 @@
-<h1 class="text-center me-4">SIGNUP</h1>
-<div class="container p-5 text-center" >
-  <div class="form-group px-5">
-      <%= form_for(@user) do |form| %>
-        <%= form.text_field :name, class: "form-control", :placeholder => "Username" %> <br/> 
-        <%= form.text_field :first_name, class: "form-control", :placeholder => "First name" %> <br/> 
-        <%= form.text_field :last_name, class: "form-control", :placeholder => "Last name" %> <br/> 
-        <%= form.email_field :email, class: "form-control", :placeholder => "Email" %> <br/> 
-        <%= form.telephone_field :phone, class: "form-control", :placeholder => "Phone number" %> <br/> 
-        <%= form.password_field :password, class: "form-control", :placeholder => "Password" %> <br/>
-        <div class="d-grid">
-        <%= form.submit "Signup", class: "btn btn-jindigo" %><br/> <br/> 
+<div class="container text-center p-5">
+    <div class="card text-white bg-dark mb-3 p-5">
+        <div class="card-header">
+          <h1 class="text-center" >SIGNUP</h1>
         </div>
-      <% end %>
-  </div>
+          <div class="card-body">
+              <div class="form-group">
+                  <%= form_for(@user) do |form| %>
+                    <%= form.text_field :name, class: "form-control", :placeholder => "Username" %> <br/> 
+                    <%= form.text_field :first_name, class: "form-control", :placeholder => "First name" %> <br/> 
+                    <%= form.text_field :last_name, class: "form-control", :placeholder => "Last name" %> <br/> 
+                    <%= form.email_field :email, class: "form-control", :placeholder => "Email" %> <br/> 
+                    <%= form.telephone_field :phone, class: "form-control", :placeholder => "Phone number" %> <br/> 
+                    <%= form.password_field :password, class: "form-control", :placeholder => "Password" %> <br/>
+                    <div class="d-grid">
+                    <%= form.submit "Signup", class: "btn btn-jindigo" %><br/>
+                    </div>
+                  <% end %>
+              </div>
+          </div>
+    </div>
 </div>
-<%= link_to 'Back', users_path,  class: "btn btn-jindigo" %>
+<%# <%= link_to 'Back', users_path,  class: "btn btn-jindigo" %>
