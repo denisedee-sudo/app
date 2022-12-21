@@ -15,9 +15,9 @@
       <tr>
         <td><%= toy.name %></td>
         <td><%= toy.description %></td>
-        <td><%= link_to 'Show', toy, method: :get %></td>
-        <td><%= link_to 'Edit', edit_toy_path(toy) %></td>
-        <td><%= link_to 'Destroy', toy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', toy, method: :get,  class: "btn btn-jindigo" %></td>
+        <td><%= link_to 'Edit', edit_toy_path(toy),  class: "btn btn-jindigo" %></td>
+        <td><%= link_to 'Destroy', toy, method: :delete, data: { confirm: 'Are you sure?' },  class: "btn btn-jindigo" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -25,4 +25,4 @@
 
 <br>
 
-<%= link_to 'New toy', new_toy_path %>
+<%= link_to 'New toy', new_toy_path,  class: "btn btn-jindigo" %>

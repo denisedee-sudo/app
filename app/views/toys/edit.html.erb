@@ -1,14 +1,15 @@
 <h1>toys#edit</h1>
 <p>Find me in app/views/toys/edit.html.erb</p>
     <%= form_for(@toy) do |toy| %>
-      <tr>
-      <%= toy.label :name %> <br/>
+      <div class="">
+      <%= toy.label :name%> <br/>
       <%= toy.text_field :name %> <br/> <br/>
-      <%= toy.label :description %> <br/> 
+      <%= toy.label :description%> <br/> 
       <%= toy.text_field :description %> <br/> <br/>
-      <%= toy.submit "Submit" %> <br/> 
-      </tr>
+      </div>
+      <%= toy.submit "Submit", class: "btn btn-jindigo" %> <br/><br/>
+
     <% end %>
 
-<%= link_to 'Show', @toy %> |
-<%= link_to 'Back', toys_path %>
+<%= link_to 'Show', @toy,  class: "btn btn-jindigo" %> 
+<%= link_to 'Back', toys_path,  class: "btn btn-jindigo" %>

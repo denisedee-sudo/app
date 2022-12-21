@@ -1,6 +1,18 @@
 <h1>toys#show</h1>
 
-      <%= @toy.name %> <br/> <br/>
-      <%= @toy.description %> <br/> <br/>
+      <div class="row">
+            <div class="col-4">
+                  <div class="card bg-dark mb-2">
+                        <div class="card-header">
+                        <%= @toy.name%>
+                        </div>
+                        <div class="card-body">
+                        <p class="card-text">
+                        <%= @toy.description%>
+                        </p>
+                        </div>
+                  </div>
+            </div>
+      </div>
 
       <%= link_to 'Back', toys_path %>
