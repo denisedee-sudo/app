@@ -2,19 +2,15 @@
     <div class="card text-white bg-dark mb-3 p-5">
         <div class="card-header"><h1 class="text-center" >LOGIN</h1></div>
         <div class="card-body">
-            <form action="" class="form-group">
-                <input class="form-control" type="text" placeholder="Username"> <br>
-                <input class="form-control" type="password" placeholder="Password"> <br>
+            <div class="form-group">
+                <%= form_for(:page, url: login_path) do |form| %>
+                <%= form.email_field :email, class: "form-control", :placeholder => "Email" %> <br/> 
+                <%= form.password_field :password, class: "form-control", :placeholder => "Password" %> <br/>
                 <div class="d-grid">
-                    <button class="btn btn-jindigo mb-2">
-                        Login
-                    </button>
-                    <h6>
-                        Are you new?
-                    </h6>
-                    <%= link_to 'Signup', "/signup",  class: "btn btn-jindigo" %>
+                <%= form.submit "Login", class: "btn btn-jindigo" %><br/>
                 </div>
-            </form>
+                <% end %>
+            </div>
         </div>
     </div>
 </div>
