@@ -6,7 +6,7 @@
                 <%= form_for(@toy) do |toy| %>
                 <%= toy.text_field :name, class: "form-control", :placeholder => "Toy Name" %> <br/>
                 <%= toy.text_area :description, class: "form-control", :placeholder => "Description" %> <br/>
-                <%= toy.file_field :image %>
+                <%= toy.file_field :image, class: "btn btn-primary w-100" %> <br/> <br/> 
                 <%= toy.submit "Add",  class: "btn btn-jindigo w-100"%> <br/> 
                  <% end %>
             </div>
