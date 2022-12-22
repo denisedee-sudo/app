@@ -1,12 +1,17 @@
-<h1>toys#new</h1>
-<p>Find me in app/views/toys/new.html.erb</p>
-
-    <%= form_for(@toy) do |toy| %>
-      <%= toy.label :name %> <br/>
-      <%= toy.text_field :name, :placeholder => "Toy" %> <br/> <br/>
-      <%= toy.label :description %> <br/> 
-      <%= toy.text_field :description, :placeholder => "Description" %> <br/> <br/>
-      <%= toy.submit "Submit" %> <br/> 
-    <% end %>
+<div class="container p-5 text-center">            
+    <div class="card text-white bg-dark mb-3 p-5">
+        <div class="card-header"><h2 class="text-center" >ADD TOY</h2></div>
+        <div class="card-body">
+            <div class="form-group">
+                <%= form_for(@toy) do |toy| %>
+                <%= toy.text_field :name, class: "form-control", :placeholder => "Toy Name" %> <br/>
+                <%= toy.text_area :description, class: "form-control", :placeholder => "Description" %> <br/>
+                <%= toy.file_field :image %>
+                <%= toy.submit "Add",  class: "btn btn-jindigo w-100"%> <br/> 
+                 <% end %>
+            </div>
+        </div>
+    </div>
+</div>
 
 <%= link_to 'Back', toys_path,  class: "btn btn-jindigo" %>
