@@ -8,7 +8,7 @@ class PagesController < ApplicationController
   def create
     @user = User.find_by_email(params[:page][:email])
     if @user && @user.authenticate(params[:page][:password])
-        page[:user_id] = @user.id
+        session[:user_id] = @user.id
         redirect_to '/'
     else
         redirect_to '/about'
@@ -16,7 +16,7 @@ class PagesController < ApplicationController
   end 
 
   def destroy 
-    page[:user_id] = nil 
+    session[:user_id] = nil 
     redirect_to '/' 
   end
 
