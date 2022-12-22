@@ -1,3 +1,4 @@
+<br/>
 <% if current_user %> 
 <h1>Welcome <%= current_user.first_name %></h1>
 <% else %>
@@ -5,16 +6,16 @@
 <% end %> 
 <br/><br/>
 
-<div id="herosection" class="carousel slide row" data-bs-ride="carousel">
+<div id="herosection" class="carousel slide w-100" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <%= image_tag "toy1.png", class: "d-flex w-100" %>
+      <%= image_tag "toy1.png", class: "d-block w-100" %>
     </div>
     <div class="carousel-item">
-      <%= image_tag "toy2.png", class: "d-flex w-100" %>
+      <%= image_tag "toy2.png", class: "d-block w-100" %>
     </div>
     <div class="carousel-item">
-      <%= image_tag "toy3.png", class: "d-flex w-100" %>
+      <%= image_tag "toy3.png", class: "d-block w-100" %>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#herosection" data-bs-slide="prev">
