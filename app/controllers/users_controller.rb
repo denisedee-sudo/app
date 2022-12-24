@@ -8,6 +8,11 @@ class UsersController < ApplicationController
     @toys = @user.toys 
   end
 
+  def profile
+    @user = User.find_by(id:current_user.id)
+    @toys = @user.toys
+  end
+
   def new
     @user = User.new
   end
