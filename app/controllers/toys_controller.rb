@@ -13,6 +13,7 @@ class ToysController < ApplicationController
         
         def create
           @toy = Toy.new(toy_params)
+          @toy.user = current_user
           @toy.image.attach(params[:toy][:image])
           if @toy.save
             redirect_to @toy
@@ -44,6 +45,6 @@ class ToysController < ApplicationController
 
         private
         def toy_params
-          params.require(:toy).permit(:name, :description, :image)
+          params.require(:toy).permit(:name, :description, :image, :user)
         end
 end
