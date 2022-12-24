@@ -35,7 +35,7 @@ class UsersController < ApplicationController
     @user.update(user_params)
     if @user.save
       flash[:success] = "This user was successfully updated."
-      redirect_to "/users"
+      redirect_to "/profile"
     else
       render "new"
     end

@@ -1,10 +1,11 @@
 <h1>Users#profile</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<p>Find me in app/views/users/profile.html.erb</p>
       <%= @user.name %> <br/> 
       <%= @user.first_name %> <br/>
       <%= @user.last_name %> <br/>
       <%= @user.email %> <br/>
       <%= @user.phone %> <br/> <br/>
+      <%= link_to 'Edit my profile', edit_user_path(current_user), class: "btn btn-jindigo" %>
       <h2>Your Toys</h2>
 
       <% @toys.each do |toy| %> 
