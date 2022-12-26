@@ -7,7 +7,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :last_name
       t.string :email
       t.bigint :phone
-      t.integer :admin, default: 0
+      t.integer :admin, default: 0, null: false
       t.timestamps
     end
   end
