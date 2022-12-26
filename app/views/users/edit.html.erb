@@ -9,9 +9,12 @@
       <%= form.label :email %> <br/> 
       <%= form.email_field :email %> <br/> 
       <%= form.label :phone %> <br/> 
-      <%= form.telephone_field :phone %> <br/> <br/>
-      <%# <%= form.label :password %>  
-      <%# <%= form.password_field :password %> 
+      <%= form.telephone_field :phone %> <br/>
+         <% if current_user %>
+               <%= form.label :password %> <br/>
+               <%= form.password_field :password %><br/>
+         <% end %>
+      <br/>
       <%= form.submit "Submit", class: "btn btn-jindigo" %><br/> <br/> 
     <% end %>
 

@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    before_action :require_admin, only: [:index, :new, :create, :update, :show, :edit, :destroy]
   def index
     @users = User.all
   end
