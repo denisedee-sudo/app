@@ -1,29 +1,33 @@
-<h1>Users#profile</h1>
-<p>Find me in app/views/users/profile.html.erb</p>
-      <%= @user.name %> <br/> 
-      <%= @user.first_name %> <br/>
-      <%= @user.last_name %> <br/>
-      <%= @user.email %> <br/>
-      <%= @user.phone %> <br/> <br/>
-      <%= link_to 'Edit my profile', edit_user_path(current_user), class: "btn btn-jindigo" %>
-      <h2>Your Toys</h2>
+<br />
+<div class = "container-fluid">
+      <h1>Users#profile</h1>
+      <p>Find me in app/views/users/profile.html.erb</p>
+            <%= @user.name %> <br/> 
+            <%= @user.first_name %> <br/>
+            <%= @user.last_name %> <br/>
+            <%= @user.email %> <br/>
+            <%= @user.phone %> <br/> <br/>
+            <%= link_to 'Edit my profile', edit_user_path(current_user), class: "btn btn-jindigo" %>
+            <h2>Your Toys</h2>
 
-      <% @toys.each do |toy| %> 
-            <div class="row">
-                  <div class="col-4">
-                        <div class="card bg-dark mb-2">
-                              <div class="card-header">
-                              <%= toy.name%>
-                              </div>
-                              <div class="card-body">
-                              <p class="card-text">
-                              <%= toy.description%>
-                              </p>
+            <% @toys.each do |toy| %> 
+                  <div class="row">
+                        <div class="col-4">
+                              <div class="card bg-dark mb-2">
+                                    <div class="card-header">
+                                    <%= toy.name%>
+                                    </div>
+                                    <div class="card-body">
+                                    <p class="card-text">
+                                    <%= toy.description%>
+                                    </p>
+                                    </div>
                               </div>
                         </div>
                   </div>
-            </div>
-      <% end %>
-      <%= link_to 'Add more toys!', new_toy_path, class: "btn btn-jindigo" %>
-      <br/> <br/>
-<%= link_to 'Back', users_path, class: "btn btn-jindigo" %>
+            <% end %>
+            <%= link_to 'Add more toys!', new_toy_path, class: "btn btn-jindigo" %>
+            <br/> <br/>
+      <%= link_to 'Back', users_path, class: "btn btn-jindigo" %>
+</div>
+<br />

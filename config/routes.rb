@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :toys
   resources :users
   get '/profile' => "users#profile"
+  get '/admin' => "users#dashboard", as: :admin
   get '/login' => "sessions#new"
   post '/login' => "sessions#create"
   delete '/logout' => 'sessions#destroy' 

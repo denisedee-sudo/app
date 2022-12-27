@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    before_action :require_user, only: [:profile]
     before_action :require_admin, only: [:index, :new, :create, :update, :show, :edit, :destroy]
   def index
     @users = User.all
@@ -46,6 +47,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.destroy
     flash[:success] = "This user was successfully removed."
+  end
+
+  def dashboard
+    @users = User.all
   end
   
   private
