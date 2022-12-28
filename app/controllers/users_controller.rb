@@ -38,7 +38,7 @@ class UsersController < ApplicationController
     @user.update(user_params)
     if @user.save
       flash[:success] = "This user was successfully updated."
-      redirect_to "/profile"
+      redirect_to user_path
     else
       render "new"
     end
@@ -56,7 +56,7 @@ class UsersController < ApplicationController
   
   private
   def user_params
-    params.require(:user).permit(:name, :password, :first_name, :last_name, :email, :phone)
+    params.require(:user).permit(:name, :password, :first_name, :last_name, :email, :phone, :admin)
   end
 
 end

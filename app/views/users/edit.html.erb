@@ -13,7 +13,7 @@
          <%= form.label :phone %> <br/> 
          <%= form.telephone_field :phone %> <br/>
          <%= form.label :admin %> <br/> 
-         <%= form.select :admin, [["No", 0 ], ["Yes", 1]] %><br/>
+         <%= form.select :admin, [["Yes", 1], ["No", 0 ]] %><br/>
             <% if current_user %>
                   <%= form.label :password %> <br/>
                   <%= form.password_field :password %><br/>
