@@ -12,6 +12,8 @@
          <%= form.email_field :email %> <br/> 
          <%= form.label :phone %> <br/> 
          <%= form.telephone_field :phone %> <br/>
+         <%= form.label :admin %> <br/> 
+         <%= form.select :admin, [["No", 0 ], ["Yes", 1]] %><br/>
             <% if current_user %>
                   <%= form.label :password %> <br/>
                   <%= form.password_field :password %><br/>
