@@ -1,6 +1,7 @@
 class ToysController < ApplicationController
   before_action :require_admin, only: [:index, :new, :create, :update, :show, :edit, :destroy]
-        def index
+  layout 'admins'  
+      def index
           @toys = Toy.all
         end
       

@@ -3,12 +3,13 @@ Rails.application.routes.draw do
   resources :users
   get '/profile' => "users#profile"
   get '/admin' => "users#dashboard", as: :admin
+  get "/signup" => "users#new"
+  post "/signup" => "users#create"
+  get '/admin/index' => "users#index"
   get '/login' => "sessions#new"
   post '/login' => "sessions#create"
   delete '/logout' => 'sessions#destroy' 
   get '/about' => "sessions#about"
-  get "/signup" => "users#new"
-  post "/signup" => "users#create"
   root "sessions#index"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
