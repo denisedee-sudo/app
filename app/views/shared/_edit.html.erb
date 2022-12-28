@@ -1,0 +1,31 @@
+<br />
+<div class="container-fluid">
+<h1>Users#edit</h1>
+      <%= form_for(@user) do |form| %>
+         <%= form.label :username %> <br/> 
+         <%= form.text_field :name %> <br/> 
+         <%= form.label :first_name %> <br/> 
+         <%= form.text_field :first_name %> <br/> 
+         <%= form.label :last_name %> <br/> 
+         <%= form.text_field :last_name %> <br/> 
+         <%= form.label :email %> <br/> 
+         <%= form.email_field :email %> <br/> 
+         <%= form.label :phone %> <br/> 
+         <%= form.telephone_field :phone %> <br/>
+            <% if current_user %>
+                  <%= form.label :password %> <br/>
+                  <%= form.password_field :password %><br/>
+                  <% if current_user.admin? %>
+                     <%= form.label :admin %> <br/> 
+                     <%= form.select :admin, [["Yes", 1], ["No", 0 ]] %><br/>
+                  <% end  %>
+            <% end %>
+         <br/>
+         <%= form.submit "Submit", class: "btn btn-jindigo" %><br/> <br/> 
+      <% end %>
+
+   <%= link_to 'Show', @user,  class: "btn btn-jindigo" %>
+   <%= link_to 'Back', users_path,  class: "btn btn-jindigo" %>
+
+</div>
+<br />

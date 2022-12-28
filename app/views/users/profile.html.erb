@@ -7,7 +7,7 @@
             <%= @user.last_name %> <br/>
             <%= @user.email %> <br/>
             <%= @user.phone %> <br/> <br/>
-            <%= link_to 'Edit my profile', edit_user_path(@user), class: "btn btn-jindigo" %>
+            <%= link_to 'Edit my profile', profile_edit_path(@user), class: "btn btn-jindigo" %>
             <h2>Your Toys</h2>
 
             <% @toys.each do |toy| %> 

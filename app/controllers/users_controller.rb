@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-    before_action :require_user, only: [:profile]
-    before_action :require_admin, only: [:index, :new, :create, :update, :show, :edit, :destroy, :dashboard]
+    before_action :require_user, only: [:profile, :profile_edit, :profile_update]
+    before_action :require_admin, only: [:index, :new, :create, :show, :edit, :update, :destroy, :dashboard]
     layout 'admins'
   def index
     @users = User.all
@@ -14,6 +14,19 @@ class UsersController < ApplicationController
   def profile
     @user = User.find_by(id:current_user.id)
     @toys = @user.toys
+  end
+  def profile_edit
+    @user = User.find_by(id:current_user.id)
+  end
+  def profile_update
+    @user = User.find_by(id:current_user.id)
+    @user.update(user_params)
+    if @user.save
+      flash[:success] = "This user was successfully updated."
+      redirect_to user_path
+    else
+      render "new"
+    end
   end
 
   def new
@@ -48,10 +61,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.destroy
     flash[:success] = "This user was successfully removed."
-  end
-
-  def dashboard
-    @users = User.all
   end
   
   private

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :toys
   resources :users
+  get '/profile/edit' => "users#profile_edit"
+  patch '/profile/edit' => "users#profile_update"
   get '/profile' => "users#profile"
   get "/signup" => "users#new"
   post "/signup" => "users#create"

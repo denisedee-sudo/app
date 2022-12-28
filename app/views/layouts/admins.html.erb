@@ -11,7 +11,7 @@
                             <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">
                              <%# code below %>
                         <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
-                        <h2 class="fs-5 pb-3 d-none d-sm-inline"><%= current_user.first_name %></h2>
+                        <h2 class="pb-3 d-none d-sm-inline"><%= current_user.first_name %></h2>
                             <%# code above %>
                             </span></a>
                         <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
@@ -27,6 +27,7 @@
                             <li><a class="dropdown-item" href="#">Sign out</a></li>
                         </ul>
                     </li>
+                    <% if current_user.admin? %>
                     <li class="nav-item">
                         <a href="#" class="nav-link align-middle px-0">
                             <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Users</span>
@@ -37,6 +38,7 @@
                             <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Toys</span>
                         </a>
                     </li>
+                    <% end  %>
                 </ul>
             </div>
         </div>
