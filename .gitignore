@@ -8,7 +8,7 @@
 /css
 # Ignore bundler config.
 /.bundle
-
+app/views/users/_dashboard.html.erb
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
