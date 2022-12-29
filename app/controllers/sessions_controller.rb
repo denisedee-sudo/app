@@ -23,6 +23,9 @@ class SessionsController < ApplicationController
   
     def about
     end
-    
+
+    def feed
+      @toys = Toy.all
+    end
 
 end

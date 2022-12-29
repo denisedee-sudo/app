@@ -1,0 +1,22 @@
+<br />
+<div class="container-fluid text-center">
+    <h2>Feed</h2>
+
+        <%= link_to 'New toy', new_toy_path,  class: "btn btn-jindigo" %>
+
+    <div class="row">
+        <% @toys.each do |toy| %>
+        <div class="container me-1 my-3">
+            <div class="card text-white border-light bg-dark col-12">
+                <div class="card-header">Toys</div>
+                <div class="card-body">
+                <h5 class="card-title"><%= toy.name %></h5>
+                <p class="card-text"><%= toy.description %></p>
+                </div>
+                <div class="card-footer text-end"><%= toy.user.name %></div>
+            </div>
+        </div>
+        
+        <% end %>
+    </div>
+</div>
